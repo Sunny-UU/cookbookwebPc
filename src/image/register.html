@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<title>注册</title>
+	<style type="text/css">
+		div{
+			width: 400px;
+			height: 400px;
+			background-color: white; 
+			margin:0 auto;
+		}
+		form{
+			background-color:#f9f8f0;
+		}
+		body{
+			background-color:#f9f8f0;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<form action="" method="post">
+		<fieldset>
+			<legend  align="center"><h1>注册</h1></legend>
+			<label>账号：<input type="text" placeholder="请输入账号" autocomplete="on" name="zhanghao" /><br/></label>
+			<label>密码：<input type="password" placeholder="请输入密码"/><br/></label>
+			<label>口味：<select ><br/>
+				<option>请选择口味偏好</option><br/>
+				<option selected="selected">酸</option><br/>
+				<option>甜</option><br/>
+				<option>辣</option><br/>
+			</select><br/></label>
+			
+			<label>喜好：<input type="text" placeholder="请输入最喜欢的美食" list="food" />
+			<datalist id="food">
+				<option>火锅</option>
+				<option>香锅</option>
+				<option>王婆大虾</option>
+				<option>三汁焖锅</option>
+				<option>红烧肉</option>
+				<option>回锅肉</option>
+			</datalist><br/></label>
+			<label>爱好：<input name="hobby"  type="checkbox"/>足球
+				<input name="hobby" type="checkbox"/>篮球
+				<input name="hobby" type="checkbox"/>羽毛球
+			</label><br/>
+			<label>姓名：<input type="text" placeholder="请输入真实姓名"/><br/></label>
+			<lable>性别：<input name="gender" type="radio" />女
+						<input name="gender" type="radio"/>男
+			</lable><br/>
+			<label>年龄：<input type="number"/></label><br/>
+			<label>生日：<input type="date"/></label><br/>
+			<label>籍贯：<input type=text placeholder="请输入籍贯"  list="jiguan"/>
+			<datalist>
+				<option>内蒙古</option>
+				<option>山西</option>
+				<option>山东</option>
+				<option>四川</option>
+				<option>北京</option>
+				<option>河北</option>
+				<option>广东</option>
+				<option>上海</option>
+			</datalist><br/></label>
+			<label>手机：<input type="tel"/></label><br/>
+			<label>邮箱：<input type="email"/></label><br/>
+			<br/>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="submit"/>
+			&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset" />
+		</fieldset>
+	</form>
+	</div>
+</body>
+</html>
