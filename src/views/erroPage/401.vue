@@ -1,10 +1,10 @@
 <template>
-
+    <h3>您没有权限！！！</h3>
 </template>
 
 <script>
     export default {
-        name: "register"
+        name: "noAuthority"
     }
 </script>
 

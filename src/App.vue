@@ -1,40 +1,32 @@
 <template>
-      <Home/>
+  <div id="app">
+    <HeaderNavmenu></HeaderNavmenu>
+    <router-view/>
+  </div>
 </template>
 <script>
-import Home from  '@/views/Home.vue'
-export default {
+  import HeaderNavmenu from '@/components/HeaderNavmenu'
+  export default {
+    name: "home",
     components: {
-        Home
+      HeaderNavmenu
+    },
+    data() {
+      return {
+        activeIndex: '1',
+      };
+    },
+    beforeCreate () {
+
     }
-}
+  };
 </script>
 <style lang="scss">
-*{
-    margin:0;
-    padding:0; /*清除内外边距*/
+* {
+  padding: 0;
+  margin: 0;
 }
-ul{
-    list-style: none; /*去除列表样式小点*/
-}
-a {
-    text-decoration: none;
-}
-.clearfix:before,.clearfix:after{/*清除浮动*/
-    display:table;
-    content:"";
-}
-.clearfix:after {/*清除浮动*/
-    clear:both;
-}
-.clearfix {/*清除浮动*/
-    *zoom:1;
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  body {
+    background: #fae8c8;
+  }
 </style>
