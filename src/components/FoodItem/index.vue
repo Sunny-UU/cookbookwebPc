@@ -4,14 +4,14 @@
     <div class="food-info">
       <div class="box">
         <div class="top">
-          <h3>鸡翅焖锅</h3>
-          <p class="p1"><span>0 评论 </span><span> 0 人气</span></p>
-          <p class="p2">图图</p>
+          <h3>{{footItme.foodName}}</h3>
+          <p class="p1"><span>{{footItme.commentNum}} 评论 </span><span> {{footItme.popularityNum}} 人气</span></p>
+          <p class="p2">{{footItme.userName}}</p>
         </div>
         <div class="bottom">
           <ul>
-            <li class="li1">10步 / 大概60分钟</li>
-            <li class="li2">煮 / 咸鲜味</li>
+            <li class="li1">{{footItme.procedureNum}}步 / 大概{{footItme.timeLong}}分钟</li>
+            <li class="li2">{{footItme.cookingMethod}} / {{footItme.classify}}</li>
           </ul>
         </div>
       </div>
@@ -21,7 +21,8 @@
 
 <script>
   export default {
-    name: "FoodItem"
+    name: "FoodItem",
+    props: ['footItme'],
   }
 </script>
 

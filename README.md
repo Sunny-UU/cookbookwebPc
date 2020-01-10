@@ -1,5 +1,10 @@
 # cookbook-web-pc
 
+## 项目描述
+```
+下厨吧
+```
+
 ## Project setup
 ```
 yarn install

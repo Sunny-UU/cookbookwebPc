@@ -13,29 +13,47 @@
     <article class="foot-list">
       <h1>精选推荐菜谱</h1>
       <div class="goot-list-box">
-        <food-item />
-        <food-item />
-        <food-item />
-        <food-item />
-        <food-item />
-        <food-item />
-        <food-item />
-        <food-item />
-        <food-item />
-        <food-item />
-        <food-item />
+        <food-item v-for="item in foodList" v-bind:key="item.id" :footItme="item"/>
       </div>
+      <el-pagination
+        background
+        layout="prev, pager, next"
+        :total="1000">
+      </el-pagination>
     </article>
   </section>
 </template>
 
 <script>
   import FoodItem from "@/components/FoodItem";
+  import {getFootListApi} from "@/api/footList"
   export default {
     name: "FoodList",
     components: {
       FoodItem
     },
+    data: function () {
+      return {
+        foodList: []
+      }
+    },
+    methods: {
+      // 获取菜单列表
+      getfoodList(data) {
+        getFootListApi(data)
+          .then(res => {
+            console.log(res.foodList);
+            this.foodList = res.foodList;
+          })
+          .catch(err => {
+            console.log(err)
+          })
+      }
+    },
+    mounted: function () {
+      this.getfoodList({})
+      console.log('a is: ' + this.a)
+    }
   }
 </script>
 
