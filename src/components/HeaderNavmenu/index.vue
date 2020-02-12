@@ -5,8 +5,8 @@
         <li><img src="@/assets/image/logo.png"></li>
         <li><a href="/"><strong>首页</strong></a></li>
         <li><a href="/foodlist"><strong>菜谱大全</strong></a></li>
-        <li><a href=""><strong>饮食健康</strong></a></li>
-        <li><a href=""><strong>美食菜单</strong></a></li>
+        <li><a href="/healthfood"><strong>饮食健康</strong></a></li>
+        <li><a href="/foodmenu"><strong>美食菜单</strong></a></li>
         <li><a href=""><strong>家居馆</strong></a></li>
       </ul>
       <div class="sou">
@@ -18,16 +18,16 @@
         </div>
       </div>
       <div class="dl">
-        <ul>
+        <ul style="display: none">
           <li><a href=""><img src="@/assets/image/hh.jpg"/>QQ登陆</a></li>
           <li><a href=""><img src="@/assets/image/wb.jpg">微博登陆</a></li>
           <li><a href="">注册</a></li>
-          <li><a href="">登陆</a></li>
+          <li><a href="/login">登陆</a></li>
         </ul>
-        <ul style="display: none">
-          <li><a href="<%=basePath%>myFoodServlet">我的菜谱</a></li>
-          <li><a href="<%=basePath%>getTypeServlet">发表菜谱</a></li>
-          <li><a href="<%=basePath%>myMessageServlet">个人信息</a></li>
+        <ul>
+          <li><a href=""><img src="@/assets/image/hh.jpg"/>蚂蚁</a></li>
+          <li><a href="/individualcenter">美食空间</a></li>
+          <li><a href="/editartical">发表菜谱</a></li>
           <li><a href="<%=basePath%>outLoginServlet">退出登录</a></li>
         </ul>
       </div>
@@ -42,6 +42,9 @@
 </script>
 
 <style lang="scss" scoped>
+  a{
+    text-decoration: none;
+  }
   ul li {
     padding: 0;
     margin: 0;

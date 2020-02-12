@@ -7,9 +7,12 @@ import store from './store'
 import './axios/axios'
 import './mock/mock'
 import './iconfont/index'
+import Tinymce from './components/Tinymce' // ES6 Module
 
 Vue.use(ElementUI)
 Vue.config.productionTip = false
+// 注册为全局组件
+Vue.component('tinymce', Tinymce)
 
 new Vue({
   router,

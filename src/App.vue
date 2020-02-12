@@ -2,14 +2,17 @@
   <div id="app">
     <HeaderNavmenu></HeaderNavmenu>
     <router-view/>
+    <FootItem></FootItem>
   </div>
 </template>
 <script>
   import HeaderNavmenu from '@/components/HeaderNavmenu'
+  import FootItem from '@/components/FootItem'
   export default {
     name: "home",
     components: {
-      HeaderNavmenu
+      HeaderNavmenu,
+      FootItem
     },
     data() {
       return {

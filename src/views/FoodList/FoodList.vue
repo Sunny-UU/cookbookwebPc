@@ -40,6 +40,7 @@
     methods: {
       // 获取菜单列表
       getfoodList(data) {
+
         getFootListApi(data)
           .then(res => {
             console.log(res.foodList);

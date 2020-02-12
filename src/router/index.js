@@ -31,6 +31,62 @@ export const constantRoutes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/FoodList/FoodList.vue')
   },
   {
+      path: '/fooddetail',
+      name: 'fooddetail',
+      meta: {
+          title: '制作步骤'
+      },
+      component: () => import(/* webpackChunkName: "about" */ '../views/FoodDetail/FoodDetail.vue')
+  },
+  {
+      path: '/healthfood',
+      name: 'healthfood',
+      meta: {
+          title: '饮食健康'
+      },
+      component: () => import(/* webpackChunkName: "about" */ '../views/HealthFood/HealthFood.vue')
+  },
+  {
+      path:'/newsdetail',
+      name:'newsdetail',
+      mata:{
+          title:'健康新闻'
+      },
+      component:()=> import('../views/NewsDetail/NewsDetail.vue')
+  },
+  {
+     path:'/foodmenu',
+     name:'foodmenu',
+     mata:{
+         title:"美食菜单"
+     },
+      component:()=>import('../views/FoodMenu/FoodMenu.vue')
+  },
+  {
+      path:'/individualcenter',
+      name:'individualcenter',
+      mata:{
+          title:"美食空间"
+      },
+      component:()=>import('../views/IndividualCenter/IndividualCenter.vue')
+  },
+  {
+      path:'/editartical',
+      name:'editartical',
+      mata:{
+          title:"发表菜谱"
+      },
+      component:()=>import('../views/EditArtical/EditArtical.vue')
+  },
+  {
+      path:'/editperson',
+      name:'editperson',
+      mata:{
+          title:"发表菜谱"
+      },
+      component:()=>import('../views/EditPerson/EditPerson.vue')
+  },
+  {
       path: '/401',
       name: 'noAuthority',
       meta: {

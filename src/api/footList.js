@@ -7,3 +7,10 @@ export function getFootListApi (obj) {
     data: obj
   })
 }
+export function getMainFoodList(obj){
+  return request({
+    url:'/getMainFoodList',
+    method:'post',
+    data:obj
+  })
+}
