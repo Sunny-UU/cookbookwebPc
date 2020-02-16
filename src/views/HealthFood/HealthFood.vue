@@ -127,6 +127,7 @@ export default{
       return{
         //美食推荐
         mainFoodList:[],
+
       }
     },
     components:{
