@@ -133,6 +133,7 @@ export default{
         FoodItem,
         HealthNewsItem
     },
+
     methods:{
       //获取推荐列表
       getMainFood(data){
