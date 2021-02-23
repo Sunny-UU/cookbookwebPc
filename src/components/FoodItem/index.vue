@@ -1,22 +1,24 @@
 <template>
-  <section class="food-item">
-    <img src="@/assets/image/2.jpg" alt="">
-    <div class="food-info">
-      <div class="box">
-        <div class="top">
-          <h3>{{footItme.foodName}}</h3>
-          <p class="p1"><span>{{footItme.commentNum}} 评论 </span><span> {{footItme.popularityNum}} 人气</span></p>
-          <p class="p2">{{footItme.userName}}</p>
-        </div>
-        <div class="bottom">
-          <ul>
-            <li class="li1">{{footItme.procedureNum}}步 / 大概{{footItme.timeLong}}分钟</li>
-            <li class="li2">{{footItme.cookingMethod}} / {{footItme.classify}}</li>
-          </ul>
+  <router-link to="/foodDetail">
+    <section class="food-item">
+      <img src="@/assets/image/2.jpg" alt="">
+      <div class="food-info">
+        <div class="box">
+          <div class="top">
+            <h3>{{footItme.foodName}}</h3>
+            <p class="p1"><span>{{footItme.commentNum}} 评论 </span><span> {{footItme.popularityNum}} 人气</span></p>
+            <p class="p2">{{footItme.userName}}</p>
+          </div>
+          <div class="bottom">
+            <ul>
+              <li class="li1">{{footItme.procedureNum}}步 / 大概{{footItme.timeLong}}分钟</li>
+              <li class="li2">{{footItme.cookingMethod}} / {{footItme.classify}}</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </router-link>
 </template>
 
 <script>

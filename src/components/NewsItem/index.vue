@@ -2,7 +2,7 @@
     <div class="news">
        <img v-for="(img,index) in newsitems.items" :key="index" :src="img.href" v-show="newindex==index"/>
        <ul>
-           <li v-for="(news,index) in newsitems.items" :key="index"  :class="{healthNew:newindex==index}" @mouseover="healthNew(index)"  @mouseout="healthNew(0)"><a>{{news.title}}</a></li>
+           <li v-for="(news,index) in newsitems.items" :key="index"  :class="{healthNew:newindex==index}" @mouseover="healthNew(index)"  @mouseout="healthNew(0)"><router-link to="/foodDetail">{{news.title}}</router-link></li>
        </ul>
     </div>
 </template>

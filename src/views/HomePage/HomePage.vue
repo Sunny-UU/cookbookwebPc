@@ -11,9 +11,9 @@
       <h3 class="food_title">五月，补肾调阴阳，不负好春光</h3>
       <HoverMenu :foodStruf = foodStruf></HoverMenu>
     </div>
-    <div class="section goot-list-box" style=" margin: 0 auto; width:1230px">
+    <div class="section goot-list-box" style=" margin: 0 auto; width:1200px">
       <h3 class="food_title">五月，补肾调阴阳，不负好春光</h3>
-      <food-item v-for="item in mainFoodList" v-bind:key="item.id" :footItme="item" style="margin: 13px;"/>
+      <food-item v-for="item in mainFoodList" v-bind:key="item.id" :footItme="item"/>
     </div>
     <div class="section goot-list-box" style=" margin: 0 auto; width:1240px;">
       <h3 class="food_title">健康新闻</h3>
