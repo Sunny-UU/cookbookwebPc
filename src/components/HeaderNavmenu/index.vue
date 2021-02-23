@@ -1,129 +1,106 @@
 <template>
-  <div class="header">
-    <div class="head">
-      <ul>
-        <li><img src="@/assets/image/logo.png"></li>
-        <li><a href="/"><strong>首页</strong></a></li>
-        <li><a href="/foodlist"><strong>菜谱大全</strong></a></li>
-        <li><a href="/healthfood"><strong>饮食健康</strong></a></li>
-        <li><a href="/foodmenu"><strong>美食菜单</strong></a></li>
-        <li><a href=""><strong>家居馆</strong></a></li>
-      </ul>
-      <div class="sou">
-        <div class="search">
-          <form method="post" action="">
-            <input type=text placeholder="请输入菜谱/食材/菜单/作者"/>
-            <input type=submit value="搜索 ">
-          </form>
-        </div>
-      </div>
-      <div class="dl">
-        <ul style="display: none">
-          <li><a href=""><img src="@/assets/image/hh.jpg"/>QQ登陆</a></li>
-          <li><a href=""><img src="@/assets/image/wb.jpg">微博登陆</a></li>
-          <li><a href="">注册</a></li>
-          <li><a href="/login">登陆</a></li>
-        </ul>
-        <ul>
-          <li><a href=""><img src="@/assets/image/hh.jpg"/>蚂蚁</a></li>
-          <li><a href="/individualcenter">美食空间</a></li>
-          <li><a href="/editartical">发表菜谱</a></li>
-          <li><a href="<%=basePath%>outLoginServlet">退出登录</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      <el-row class="header" type="flex" justify="center">
+       `<el-col :span="16">
+          <el-row type="flex" justify="space-between">
+
+           <el-col :span="8">
+             <el-row :gutter="10" class="menu_area">
+               <el-col :span="4"><img style="width: 100%; margin-top: -10px;" src="@/assets/image/logo.png"></el-col>
+               <el-col :span="4"><router-link to="/">首页</router-link></el-col>
+               <el-col :span="4"><router-link to="/foodlist">菜谱大全</router-link></el-col>
+               <el-col :span="4"><router-link to="/healthfood">饮食健康</router-link></el-col>
+               <el-col :span="4"><router-link to="/foodmenu">美食菜单</router-link></el-col>
+               <el-col :span="4"><router-link to="">家居馆</router-link></el-col>
+             </el-row>
+           </el-col>
+
+          <el-col :span="8">
+             <el-row justify="center" type="flex" class="search_area">
+                 <el-col  class="search" :span="20">
+                     <el-col :span="18">
+                         <input type=text placeholder="请输入菜谱/食材/菜单/作者"/>
+                     </el-col>
+                     <el-col :span="6">
+                         <input type=submit value="搜索">
+                     </el-col>
+                 </el-col>
+             </el-row>
+           </el-col>
+
+           <el-col :span="8" class="login">
+             <el-row v-if="login" type="flex" justify="end" class="login_area">
+               <el-col :span="5"><router-link to=""><img class="img" src="@/assets/image/hh.jpg"/>蚂蚁</router-link></el-col>
+               <el-col :span="5"><router-link to="/individualcenter">美食空间</router-link></el-col>
+               <el-col :span="5"><router-link to="/editartical">发表菜谱</router-link></el-col>
+               <el-col :span="5"><router-link to="">退出登录</router-link></el-col>
+             </el-row>
+             <el-row v-else type="flex" justify="end" class="login_area">
+               <el-col :span="6"><router-link to=""><img class="img"  src="@/assets/image/hh.jpg"/>QQ登陆</router-link></el-col>
+               <el-col :span="6"><router-link to=""><img class="img"  src="@/assets/image/wb.jpg">微博登陆</router-link></el-col>
+               <el-col :span="4"><router-link to="">注册</router-link></el-col>
+               <el-col :span="4"><router-link to="/login">登陆</router-link></el-col>
+             </el-row>
+           </el-col>
+          </el-row>
+        </el-col>
+      </el-row>
 </template>
 
 <script>
   export default {
-    name: "HeaderNavmenu"
+    name: "HeaderNavmenu",
+    data(){
+      return{
+        login:false
+      }
+    },
+    components:{
+      // HeaderSearch
+    }
   }
 </script>
 
 <style lang="scss" scoped>
-  a{
-    text-decoration: none;
-  }
-  ul li {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  *{
+      font-size: 14px;
+      color:white;
+      text-align: center;
+      vertical-align: middle;
   }
   .header{
-    height:50px;
-    width: 100%;
-    background-image:linear-gradient(to right,#dd1c20,#a1000d);
-    overflow:hidden;
-    box-shadow:10px 2px 10px 3px #a7a7a7;
+      position: relative;
+      height:50px;
+      background-image:linear-gradient(to right,#dd1c20,#a1000d);
+      overflow:hidden;
+      box-shadow:10px 2px 10px 3px #a7a7a7;
   }
-  .header li{
-    float: left;
+  .img{
+      width:28px;
+      height:28px;
   }
-  .head{
-    width:1200px;
-    height:50px;
-    margin:0 auto;
-  }
-  .header .sou,.logo{
-    float:left;
-  }
-
-  .header img{
-    display: block;
-    width:70px;
-    height:50px;
-    /*margin-top: 13px;*/
+  .menu_area,.search_area,.login_area{
+      height: 28px;
+      margin: 11px 0;
   }
   .header .search{
-    height:20px;
-    width:426px;
-    border-radius:3px;
-    border:3px solid #fff;
-    margin-top:13px;
-    margin-left: 35px;
-  }
-
-  .header .dl{
-    float: right;
-    height:28px;
-    line-height: 28px;
-
-    /*行高会继承，给父亲一个高度*/
-  }
-  .dl li img{
-    float:left;
-    width:28px;
-    height:28px;
-  }
-  .head li a{
-    margin: 5px 0;
-    padding:10px;
-    color:white;
-    display:block;
-    height:28px;
-    font-size: 14px;
-  }
-  .dl li a:hover{
-    text-decoration: underline;
-    color:white;
-    background-color: rgba(126,23,23,0.3);
-    border-radius: 5px;
+      height:20px;
+      border-radius:3px;
+      border:3px solid #fff;
   }
   .search input[type=text]{
-
-    border:none;
-    text-indent:2em;
-    height:20px;
-    width:346px;
-    float:left;
+      border:none;
+      width: 100%;
+      text-indent:2em;
+      margin-top: -7px;
+      text-align: left;
+      outline: none;
+      color: #0f0130;
   }
   .search input[type=submit]{
-    color:white;
-    border:none;
-    height:20px;
-    width:80px;
-    float:left;
-    background-color:rgba(255,255,255,0);
+      border:none;
+      width: 100%;
+      background-color:rgba(255,255,255,0);
+      margin-top: -7px;
+      outline: none;
   }
 </style>
