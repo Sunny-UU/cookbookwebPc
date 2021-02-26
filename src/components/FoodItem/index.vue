@@ -1,6 +1,5 @@
 <template>
-  <router-link to="/foodDetail">
-    <section class="food-item">
+    <section class="food-item" @click="jump()">
       <img src="@/assets/image/2.jpg" alt="">
       <div class="food-info">
         <div class="box">
@@ -18,13 +17,25 @@
         </div>
       </div>
     </section>
-  </router-link>
 </template>
 
 <script>
   export default {
     name: "FoodItem",
     props: ['footItme'],
+    data(){
+      return{
+        fid:''
+      }
+    },
+    methods:{
+      junp(){
+        this.$router.push({
+          path:'/foodDetail',
+          query:{fid:this.fid}
+        })
+      }
+    }
   }
 </script>
 

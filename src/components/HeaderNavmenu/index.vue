@@ -51,11 +51,23 @@
     name: "HeaderNavmenu",
     data(){
       return{
-        login:false
+        login:true
       }
     },
     components:{
       // HeaderSearch
+    },
+    methods:{
+        ready(){
+            this.$router.push({
+                name:"/home",
+                query:{data:'dd',name:'aa'}
+            })
+            this.$router.replace({
+                name:"/",
+
+            })
+        }
     }
   }
 </script>

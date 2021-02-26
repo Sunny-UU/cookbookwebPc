@@ -172,6 +172,7 @@
 <script>
   export default{
       name: "FoodDetail",
+      props:[],
       components:{
 
       },
@@ -179,7 +180,13 @@
           return{
 
           }
+      },
+      methods:{
+          receive(){
+              const aa = this.$route.query.fid
+          }
       }
+
   }
 </script>
 <style scoped>

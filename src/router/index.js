@@ -33,6 +33,7 @@ export const constantRoutes = [
   {
       path: '/fooddetail',
       name: 'fooddetail',
+      props: true,
       meta: {
           title: '制作步骤'
       },
